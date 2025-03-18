@@ -81,7 +81,6 @@ export function impostazioni() {
 export function sotto(disegnaTesto) {
   background(255);
 
-  fill("bulle");
   disegnaTesto();
 }
 
