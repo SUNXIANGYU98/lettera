@@ -81,7 +81,7 @@ export function impostazioni() {
 export function sotto(disegnaTesto) {
   background(255);
 
-  fill("blue");
+  fill("deeppink");
   disegnaTesto();
 }
 
