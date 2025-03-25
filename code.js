@@ -12,18 +12,7 @@ export const configurazione = {
  * Disegna punto
  * Metti qui quello che vuoi disegnare per ogni punto della font!
  *
- * @typedef {Object} Ingredienti
- * @property {number} x - La coordinata x del punto
- * @property {number} y - La coordinata y del punto
- * @property {number} angolo - L'angolo della curva della font in quel punto
- * @property {number} indice - Il numero del punto nella sequenza
- * @property {number} unita - Unita' di misura di riferimento
- * @property {number} volume - Il volume del microfono
- * @property {number} [alpha] - Device orientation alpha angle (z-axis rotation)
- * @property {number} [beta] - Device orientation beta angle (front-to-back tilt)
- * @property {number} [gamma] - Device orientation gamma angle (left-to-right tilt)
- *
- * @param {Ingredienti} ingredienti
+ 
  */
 export function disegnaPunto({
   x,
@@ -41,6 +30,10 @@ export function disegnaPunto({
 
   noFill();
   stroke(0);
+
+  if (indice % 2 == 0) fill("grey");
+  else fill("orange");
+  ellipse(0, 0, sin(frameCount) * 30);
 
   // Use orientation data to influence color
   // Map alpha (z-rotation) to hue (0-360)
