@@ -60,32 +60,6 @@ export function disegnaPunto({
 
 export function caricamentoRisorse() {}
 
-export function sopra(disegnaTesto) {
-  push();
-  //
-  fill(255, 150);
-  rect(0, 0, width, height);
-
-  //
-  for (let i = 10; i > 0; i--) {
-    let alpha = map(i, 10, 0, 50, 5); //
-    let glowSize = map(sin(frameCount / 10), -1, 1, 10, 30); //
-
-    fill(255, 204, 0, alpha); //
-    textSize(configurazione.dimensione * 100 + glowSize);
-    textAlign(CENTER, CENTER);
-    text(configurazione.testo, width / 2, height / 2);
-  }
-
-  //
-  fill(255, 140, 0);
-  textSize(configurazione.dimensione * 100);
-  textAlign(CENTER, CENTER);
-  text(configurazione.testo, width / 2, height / 2);
-
-  pop();
-}
-
 export function impostazioni() {
   frameRate(30);
   angleMode(DEGREES);
